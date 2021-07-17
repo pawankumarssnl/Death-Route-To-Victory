@@ -11,4 +11,10 @@ public class MainMenu : MonoBehaviour
     public void StartGame(){
         SceneManager.LoadScene("LevelSelector");
     }
+    public void helpbutton(){
+        SceneManager.LoadScene("Helpscene");
+    }
+    public void menubutton(){
+        SceneManager.LoadScene("Settings");
+    }
 }
