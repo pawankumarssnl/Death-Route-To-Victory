@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     public float speed;
+    public float speed1;
     private int count;
     public Text ScoreText;
     private GameObject[] gems;
@@ -18,6 +19,9 @@ public class PlayerController : MonoBehaviour
     public Button playAgainButton;
     public Button backToMainMenu;
     private bool gameStarted;
+    private bool touchStart=false;
+    private Vector3 pointA;
+    private Vector3 pointB;
 
     // Start is called before the first frame update
     void Start()
@@ -34,13 +38,27 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    //void Update()
-    //{
-    //    
-    //}
+    void Update()
+    {
+        if(Input.GetMouseButtonDown(0)){
+            pointA= Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,  Camera.main.transform.position.z,Input.mousePosition.y));
+        }
+        if(Input.GetMouseButton(0)){
+            touchStart=true;
+            pointB= Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,   Camera.main.transform.position.z,Input.mousePosition.y));
+        }else{
+            touchStart=false;
+        }
+    }
 
     void FixedUpdate()
     {
+        if(touchStart){
+            Vector3 offset=pointB-pointA;
+            Vector3 direction=Vector3.ClampMagnitude(offset,1.0f);
+            playerRb.AddForce(direction *speed1 * Time.deltaTime);
+
+        }
         if(gameStarted){
         float moveHorizontal=Input.GetAxis("Horizontal");
         float moveVertical=Input.GetAxis("Vertical");

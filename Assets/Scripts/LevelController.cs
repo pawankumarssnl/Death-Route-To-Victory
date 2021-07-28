@@ -11,6 +11,9 @@ public class LevelController : MonoBehaviour
     public void loadscene2(){
         SceneManager.LoadScene("Scene2");
     }
+    public void loadscene3(){
+        SceneManager.LoadScene("Scene3");
+    }
     public void backtomainmenu(){
         SceneManager.LoadScene("StartingScene");
     }
