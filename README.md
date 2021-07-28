@@ -25,3 +25,12 @@ Demo Video:[Click Here](https://drive.google.com/file/d/1R0UXPUSGQBILp2bLlLHK7NL
 
 ---
 
+### Individual Member Contribution
+---
+
+## Kumar Abhishek (Representative)
+Written scripts to control the movement of ball,rotation of gem. Made different scene(Starting scene,Level selector,different level scene) and written script to go go from one game scene to other,
+
+## Pratham Jain 
+Made the game assets(roads and ball and positioned it inside UNITY).
+
