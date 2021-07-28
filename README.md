@@ -6,7 +6,7 @@ Team Members    :        Kumar Abhishek
                          Pratham Jain
                          Amit Kumar Singh
                          Anoop Singh Rathore
-                         Pawan
+                         Pawan Kumar
                          Manas
 ```
 Video of first week submission : [Click Here](https://drive.google.com/file/d/18OkGrqV8RNnlJEcZ54kigrr7UMN1CXV7/view?usp=sharing)
